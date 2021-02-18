@@ -18,7 +18,7 @@ async function main() {
   const HRPToken = await hre.ethers.getContractFactory("HRPToken");
   const hrp = await HRPToken.deploy("Your account address", new BN("The amount of HRPs minted in advance").toString());
 
-  await dvg.deployed();
+  await hrp.deployed();
 
   console.log("HRP token smart contract address:", hrp.address);
   console.log("HRP token name:", await hrp.name());
