@@ -7,7 +7,7 @@ contract("HRPToken", async (accounts) => {
   it("Should mint some HRPs in advance when deploying HRPToken smart contract", async () => {
     var amount = new BN('10000000000000000000');
 
-    var dvg = await HRPToken.new(accounts[1], amount);
+    var hrp = await HRPToken.new(accounts[1], amount);
 
     console.log("HRP token smart contract address:", hrp.address);
 
